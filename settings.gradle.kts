@@ -1,5 +1,8 @@
 @file:Suppress("UnstableApiUsage", "UnstableApiUsage", "UnstableApiUsage", "UnstableApiUsage")
 
+include(":data")
+
+
 pluginManagement {
     repositories {
         google {
