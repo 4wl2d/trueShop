@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage", "UnstableApiUsage", "UnstableApiUsage", "UnstableApiUsage")
+
 pluginManagement {
     repositories {
         google {
@@ -20,4 +22,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "trueShop"
-include(":app")
+include(":presentation")
