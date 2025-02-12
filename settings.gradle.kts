@@ -2,7 +2,6 @@
 
 include(":data")
 
-
 pluginManagement {
     repositories {
         google {
@@ -26,3 +25,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "trueShop"
 include(":presentation")
+include(":data")
