@@ -13,7 +13,6 @@ kotlin {
 }
 
 dependencies {
-    implementation(project(":data"))
 
     // Koin
     implementation(libs.koin.core)
