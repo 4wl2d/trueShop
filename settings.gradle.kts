@@ -1,5 +1,7 @@
 @file:Suppress("UnstableApiUsage", "UnstableApiUsage", "UnstableApiUsage", "UnstableApiUsage")
 
+include(":domain")
+
 include(":data")
 
 pluginManagement {
@@ -25,4 +27,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "trueShop"
 include(":presentation")
+include(":domain")
 include(":data")
