@@ -3,7 +3,7 @@ package ind.wl2d.domain.network
 import ind.wl2d.domain.model.Product
 
 interface NetworkService {
-    suspend fun getProducts(): ResultWrapper<List<Product>>
+    suspend fun getProducts(category: String?): ResultWrapper<List<Product>>
 }
 
 sealed class ResultWrapper<out T> {

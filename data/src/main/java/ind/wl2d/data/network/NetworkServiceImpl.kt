@@ -22,14 +22,24 @@ import kotlinx.io.IOException
 class NetworkServiceImpl(
     val client: HttpClient,
 ) : NetworkService {
-    override suspend fun getProducts(): ResultWrapper<List<Product>> =
-        makeWebRequest(
-            url = "https://fakestoreapi.com/products",
+    private val baseUrl = "https://fakestoreapi.com"
+
+    override suspend fun getProducts(category: String?): ResultWrapper<List<Product>> {
+        val url =
+            if (category != null) {
+                "$baseUrl/products/category/$category"
+            } else {
+                "$baseUrl/products"
+            }
+
+        return makeWebRequest(
+            url = url,
             method = HttpMethod.Get,
             mapper = { dataModels: List<DataProductModel> ->
                 dataModels.map { it.toProduct() }
             },
         )
+    }
 
     @OptIn(InternalAPI::class)
     suspend inline fun <reified T, R> makeWebRequest(

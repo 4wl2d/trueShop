@@ -5,5 +5,5 @@ import ind.wl2d.domain.repository.ProductRepository
 class GetProductUseCase(
     private val productRepository: ProductRepository,
 ) {
-    suspend fun invoke() = productRepository.getProducts()
+    suspend fun invoke(category: String?) = productRepository.getProducts(category)
 }
